@@ -266,7 +266,7 @@ class Register():
             X=self.checkemail(self.email_var.get())
             Y=self.checkpassword(self.password.get())
         else:
-            conn=mysql.connector.connect(host="localhost",user="root",password="aHmAdSaEeD1997",database="face_recognizer")
+            conn=mysql.connector.connect(host="localhost",user="root",password="*********",database="******")
             my_cursor=conn.cursor()
             query=("select * from new_table where email=%s")
             value=(self.email_var.get(),)
@@ -284,7 +284,7 @@ class Register():
                 self.check_lbl.config(text='تمت الموافقة',fg='green')
                 
                 try:
-                    conn=mysql.connector.connect(host="localhost",user="root",password="aHmAdSaEeD1997",database="face_recognizer")
+                    conn=mysql.connector.connect(host="localhost",user="root",password="*********",database="*********")
                     my_cursur=conn.cursor()
                     my_cursur.execute('insert into new_table values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)',(
                                                                                             self.name_var.get(),
