@@ -101,7 +101,7 @@ class Login_Window():
         elif self.txtuser.get()=="kapu" and self.txtpass.get()=="ashu":
             messagebox.showinfo("تم","اهلا بكم يم احمد")
         else:
-            conn=mysql.connector.connect(host="localhost",user="root",password="aHmAdSaEeD1997",database="face_recognizer")
+            conn=mysql.connector.connect(host="localhost",user="root",password="******",database="********")
             my_cursor=conn.cursor()
             my_cursor.execute("select * from new_table where email=%s and password=%s",(
                                                                                     self.txtuser.get(),
@@ -134,7 +134,7 @@ class Login_Window():
             messagebox.showerror("خطأ","من فضلك، ادخل كلمة السر الجديدة",parent=self.root2)
 
         else:
-            conn=mysql.connector.connect(host="localhost",user="root",password="aHmAdSaEeD1997",database="face_recognizer")
+            conn=mysql.connector.connect(host="localhost",user="root",password="******",database="*******")
             my_cursor=conn.cursor()
             qury=("select * from new_table where email=%s and securityQ=%s and securityA=%s")
             vlaue=(self.txtuser.get(),self.combo_security_Q.get(),self.txt_security.get(),)
@@ -157,7 +157,7 @@ class Login_Window():
         if self.txtuser.get()=="":
             messagebox.showerror("خطأ","ادخل عنوان البريد الالكتروني لاعادة ضبط كلمة المرور")
         else:
-            conn=mysql.connector.connect(host="localhost",user="root",password="aHmAdSaEeD1997",database="face_recognizer")
+            conn=mysql.connector.connect(host="localhost",user="root",password="********",database="*********")
             my_cursor=conn.cursor()
             query=("select * from new_table where email=%s")
             value=(self.txtuser.get(),)
@@ -465,7 +465,7 @@ class Register:
             self.engine.say('Please enter your security answer')
             self.engine.runAndWait()
             messagebox.showerror('خطأ','رجاءا قم بادخال جوابك على سؤال الحماية',parent=self.root)
-        elif self.var_admin.get()!='aHMADSAEED1997':
+        elif self.var_admin.get()!='******':
             self.engine.say('you do not have the permission to register a new aminstrators')
             self.engine.runAndWait()
             messagebox.showerror('نعتذر على ازعاجك','😔على ما يبدو انك لا تمتلك صلاحية اضافة مشرفين جدد',parent=self.root)
@@ -475,7 +475,7 @@ class Register:
             X=self.checkemail(self.email_var.get())
             Y=self.checkpassword(self.password.get())
         else:
-            conn=mysql.connector.connect(host="localhost",user="root",password="aHmAdSaEeD1997",database="face_recognizer")
+            conn=mysql.connector.connect(host="localhost",user="root",password="*********",database="******")
             my_cursor=conn.cursor()
             query=("select * from new_table where email=%s")
             value=(self.email_var.get(),)
@@ -493,7 +493,7 @@ class Register:
                 self.check_lbl.config(text='تمت الموافقة',fg='green')
                 
                 try:
-                    conn=mysql.connector.connect(host="localhost",user="root",password="aHmAdSaEeD1997",database="face_recognizer")
+                    conn=mysql.connector.connect(host="localhost",user="root",password="*****",database="*******")
                     my_cursur=conn.cursor()
                     my_cursur.execute('insert into new_table values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)',(
                                                                                             self.name_var.get(),
