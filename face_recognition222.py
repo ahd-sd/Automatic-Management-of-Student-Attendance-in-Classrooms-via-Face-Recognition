@@ -226,7 +226,7 @@ class Face_Recognition:
                     id=int(name)
                 
                     
-                    conn=mysql.connector.connect(host="localhost",username="root",password="aHmAdSaEeD1997",database="face_recognizer")
+                    conn=mysql.connector.connect(host="localhost",username="root",password="******",database="*******")
                     my_cursor=conn.cursor()
             
                     my_cursor.execute("select Name from student where Student_id="+str(id))
