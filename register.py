@@ -127,7 +127,7 @@ class Register:
         elif self.var_check.get()==0:
             messagebox.showerror("خطأ","رجاءا وافق على الشروط")
         else:
-            conn=mysql.connector.connect(host="localhost",user="root",password="aHmAdSaEeD1997",database="face_recognizer")
+            conn=mysql.connector.connect(host="localhost",user="root",password="*********",database="********")
             my_cursor=conn.cursor()
             query=("select * from register where email=%s")
             value=(self.var_email.get(),)
