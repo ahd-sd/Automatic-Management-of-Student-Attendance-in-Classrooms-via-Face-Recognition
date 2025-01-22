@@ -320,7 +320,7 @@ class Student:
               messagebox.showerror("هناك خطأ ما          ","ربما تكون قد نسيت احد الحقول فارغاً",parent=self.root)
         else:
             try:
-                conn=mysql.connector.connect(host="localhost",username="root",password="aHmAdSaEeD1997",database="face_recognizer")
+                conn=mysql.connector.connect(host="localhost",username="root",password="******",database="***********")
                 my_cursor=conn.cursor()
                 my_cursor.execute("insert into student values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",(
                                                                                                                self.var_dep.get(),
@@ -354,7 +354,7 @@ class Student:
                 
     #==========fetch data=============
     def fetch_data(self):
-        conn=mysql.connector.connect(host="localhost",username="root",password="aHmAdSaEeD1997",database="face_recognizer")
+        conn=mysql.connector.connect(host="localhost",username="root",password="*********",database="*****")
         my_cursor=conn.cursor()
         my_cursor.execute("select * from student")
         data=my_cursor.fetchall()
@@ -397,7 +397,7 @@ class Student:
             try:
                 Upadate=messagebox.askyesno("تحديث","هل ترغب بتعديل بيانات هذا الطالب",parent=self.root)
                 if Upadate>0:
-                    conn=mysql.connector.connect(host="localhost",username="root",password="aHmAdSaEeD1997",database="face_recognizer")
+                    conn=mysql.connector.connect(host="localhost",username="root",password="**********",database="******")
                     my_cursor=conn.cursor()
                     my_cursor.execute("update student set Dep=%s,course=%s,Year=%s,Semester=%s,Name=%s,Division=%s,Roll=%s,Gender=%s,Dob=%s,Email=%s,Phone=%s,Address=%s,Teacher=%s,PhotoSample=%s where Student_id=%s",(
                                                                                                                                                                                             self.var_dep.get(),
@@ -435,7 +435,7 @@ class Student:
             try:
                 delete=messagebox.askyesno("حذف بيانات الطالب","هل ترغب بحذف بيانات هذا الطالب؟",parent=self.root)
                 if delete>0:
-                    conn=mysql.connector.connect(host="localhost",username="root",password="aHmAdSaEeD1997",database="face_recognizer")
+                    conn=mysql.connector.connect(host="localhost",username="root",password="**********",database="********")
                     my_cursor=conn.cursor()
                     sql="delete from student where Student_id=%s"
                     val=(self.va_std_id.get(),)
@@ -476,7 +476,7 @@ class Student:
               messagebox.showerror("هناك خطأ ما          ","ربما تكون قد نسيت احد الحقول فارغاً",parent=self.root)
         else:
             try:
-                conn=mysql.connector.connect(host="localhost",username="root",password="aHmAdSaEeD1997",database="face_recognizer")
+                conn=mysql.connector.connect(host="localhost",username="root",password="********",database="*********")
                 my_cursor=conn.cursor()
                 my_cursor.execute("select * from student")
                 myresult=my_cursor.fetchall()
